@@ -3,6 +3,7 @@ package demo.netty.chapter1.echoserver;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
@@ -11,6 +12,7 @@ import io.netty.util.CharsetUtil;
  * @author liudongxu06
  * @date 2017/12/28
  */
+@ChannelHandler.Sharable
 public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
